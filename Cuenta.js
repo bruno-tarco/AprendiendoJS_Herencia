@@ -27,9 +27,11 @@ export class Cuenta {
         return this.#saldo;
     }
 
-    retirarDeCuenta(valor) {
-        _retirarDeCuenta(valor,0);{
-    }}
+    retirarDeCuenta(valor) { 
+        //esto es método abstracto, existe , no  hace nada y protege
+        throw new Error('Debe implementar el método retirarDeCuenta en su clase');
+
+    }
 
     _retirarDeCuenta(valor,comision) {
         valor = valor * (1+comision/100);
