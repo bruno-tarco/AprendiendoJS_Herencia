@@ -3,8 +3,8 @@ export class Cuenta {
     #saldo; //los atributos públicos se pueden escribir en el constructor
     
     constructor(cliente, numero, agencia, saldo){
-        if (this.constructor==Cuenta){
-            console.log('No se debe instanciar objetos de la clase Cuenta');
+        if (this.constructor==Cuenta){  //cuenta solo es extensible, solo heredable
+            throw new Error('No se debe instanciar objetos de la clase Cuenta');
         }
         this.numero = numero;
         this.agencia = agencia;

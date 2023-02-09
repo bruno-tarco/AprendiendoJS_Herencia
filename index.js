@@ -7,14 +7,18 @@ import {Cuenta} from './Cuenta.js';
 const cliente = new Cliente('Leonardo','13804050','123224');
 const cliente2 = new Cliente('María','16979808','8989');
 
+
+console.log(cuentaSimple);
+
 const cuentaDeLeonardo = new CuentaCorriente(cliente, '1', '001');
 const cuentaDeMaria = new CuentaCorriente(cliente2,'2','002');
 
 const CuentaAhorroLeonardo = new CuentaAhorro( cliente,'9985','001',0);
+console.log(CuentaAhorroLeonardo);
 
-const cuentaSimple = new Cuenta(cliente, '0.98', '001', 100);
 
-console.log(cuentaSimple);
+
+
 
 
 
