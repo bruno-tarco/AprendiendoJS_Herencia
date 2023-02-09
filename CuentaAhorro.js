@@ -6,7 +6,14 @@ export class CuentaAhorro extends Cuenta{
     */
     constructor(cliente, numero, agencia, saldo){
         super(cliente, numero, agencia, saldo);
-    }/*
+    }
+    
+    retirarDeCuenta(valor) {
+       
+        super.retirarDeCuenta(valor,2);
+
+    }
+    /*
     depositoEnCuenta(valor) {
         if (valor > 0)
             this.#saldo += valor;

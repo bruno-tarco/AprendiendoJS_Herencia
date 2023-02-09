@@ -25,11 +25,13 @@ export class CuentaCorriente extends Cuenta{   //estos significa: exporte la cla
         this.#saldo = 0;*/
         CuentaCorriente.cantidadCuentas++;
     }
-    
-    prueba(){
-        super.prueba(); // si quito super.prueba , entonces Método hijo reemplaza al método padre de cuenta, raro pero así funciona
-        console.log('Método hijo');
+
+    retirarDeCuenta(valor) {
+
+        super.retirarDeCuenta(valor,5);
     }
+    
+
 
   /*  depositoEnCuenta(valor) {
         if (valor > 0)
