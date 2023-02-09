@@ -17,7 +17,7 @@ export class Cliente
         this.#clave = clave;
     }
 
-    /*autenticable(clave){
-        return false; //suponiendo que mis clientes estarán autentificados
-    }*/
+    autenticable(clave){
+        return true; //suponiendo que mis clientes estarán autentificados
+    }
 }
