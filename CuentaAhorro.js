@@ -10,7 +10,7 @@ export class CuentaAhorro extends Cuenta{
     
     retirarDeCuenta(valor) {
        
-        super.retirarDeCuenta(valor,2);
+        super._retirarDeCuenta(valor,2);
 
     }
     /*
