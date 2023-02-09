@@ -1,4 +1,3 @@
-import {Cliente} from "./Cliente.js";
 import {Cuenta} from "./Cuenta.js";
 
 export class CuentaCorriente extends Cuenta{   //estos significa: exporte la clase CuentaCorriente que extiende de Cuenta
