@@ -41,5 +41,7 @@ export class Cuenta {
         valor = valor*1000;
     }
 
-
+    prueba(){
+        console.log("Método padre");
+    }
 }
