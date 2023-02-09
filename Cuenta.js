@@ -2,13 +2,22 @@ export class Cuenta {
     #cliente;
     #saldo; //los atributos públicos se pueden escribir en el constructor
     
-    constructor(tipo,cliente, numero, agencia, saldo){
-        this.tipo = tipo;
+    constructor(cliente, numero, agencia, saldo){
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente = cliente;
         this.#saldo = saldo;
     }
+
+    set cliente(valor) {
+        if (valor instanceof Cliente)
+            this.#cliente = valor;
+    }
+
+    get cliente() {
+        return this.#cliente;
+    }
+
     depositoEnCuenta(valor) {
         if (valor > 0)
             this.#saldo += valor;
@@ -16,10 +25,6 @@ export class Cuenta {
     }
 
     retirarDeCuenta(valor) {
-        if(this.tipo == 'Corriente')
-            valor = valor *1.05;
-        else if (this.tipo == 'Ahorro')
-            valor = valor * 1.02; 
         if (valor <= this.#saldo)
             this.#saldo -= valor;
         return this.#saldo;
@@ -35,4 +40,6 @@ export class Cuenta {
         valor = 200;
         valor = valor*1000;
     }
+
+
 }
