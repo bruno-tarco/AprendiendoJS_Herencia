@@ -3,6 +3,7 @@ export class Cliente
     nombreCliente;
     dniCliente;
     rutCliente;
+    //autentificable;  <<<< esto aun  funcionaría debido al prototipado de  pato hecho en index
     #clave;
 
     constructor(nombreCliente, dniCliente, rutCliente) {
